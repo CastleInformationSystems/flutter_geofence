@@ -144,7 +144,7 @@ class GeofenceManager(context: Context,
     }
 
     fun startListeningForLocationChanges() {
-        val request = LocationRequest().setInterval(60000L).setFastestInterval(10000L).setPriority(PRIORITY_BALANCED_POWER_ACCURACY)
+        val request = LocationRequest().setInterval(60000L).setFastestInterval(10000L).setPriority(PRIORITY_LOW_POWER)
         fusedLocationClient.requestLocationUpdates(request, backgroundLocationCallback, Looper.getMainLooper())
     }
 
